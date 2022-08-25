@@ -1,0 +1,22 @@
+<%- include('partials/header') -%>
+
+    <body>
+        <h1>Login Form</h1>
+        <%if(error) { %>
+            <span class="red">
+                <%=error%>
+            </span>
+            <% }%>
+                <form action="/users/login" method="POST">
+                    <input type="email" placeholder="add email" name="email">
+                    <input type="password" placeholder="add password" name="password">
+                    <input type="submit" value="Register Yourself">
+                </form>
+                <div>
+                    <a href="/auth/github">Login using github</a>
+                </div>
+                <div>
+                    <a href="/auth/google">Login using google</a>
+                </div>
+    </body>
+    <%- include('partials/footer') -%>
